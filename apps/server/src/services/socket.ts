@@ -1,10 +1,10 @@
 import {Server} from 'socket.io'
 import Redis from 'ioredis'
 const cred = {
-    'host': 'redis-a4ed058-razame-scalable-chat-app.a.aivencloud.com',
-    'port': 10826,
-    'username': 'default',
-    'password': 'AVNS_1CphBRy3iPmCF-EEvBx'
+    'host': process.env.REDIS_HOST,
+    'port': process.env.REDIS_PORT,
+    'username': process.env.REDIS_USERNAME,
+    'password': process.env.REDIS_PASSWORD
 }
 const pub = new Redis(cred)
 const sub = new Redis(cred)
